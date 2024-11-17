@@ -1,0 +1,555 @@
+*, 
+*::after, 
+*::before{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'poppins', serif;
+  font-size: 14px;
+}
+
+.sec1 {
+  background-image: url(./assets/imagedefond2.png);
+  height: 300px;
+  background-size: cover;
+  background-blend-mode: darken;
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  padding: 2rem;
+}
+
+.firsth {
+  font-size: 40px;
+  font-style: italic;
+  color: rgb(45, 45, 48);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+}
+
+#text {
+  font-size: 18px;
+  font-family: fantasy;
+  font-style: italic;
+  color: rgb(20, 14, 15);
+  padding-left: 30px;
+}
+nav li {
+  float: left;
+  display: table;
+  list-style-type: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 500;
+  font-family: 'poppins', serif;
+  text-overflow:ellipsis;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 2px black;
+}
+
+p {
+  text-align: center;
+  font-style: italic;
+  color: rgb(20, 14, 15);
+}
+
+/* section petit dejeune */
+.cadrant {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+  width: 250px;
+  height: 300px;
+  border: 1px groove #ccc;
+  background-color: #eecfcf;
+  border-radius: 10px;
+}
+
+.cadrant:hover {
+  background-color: #ee959c;
+  transition: all 300ms ease;
+  box-shadow: 10px 10px 10px #ccc;
+}
+
+.petitdej {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+#top {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+}
+
+.nomdej {
+  text-align: center;
+}
+
+/* section dejeune */
+
+.envel {
+  width: 250px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.dej {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  align-items: center;
+}
+
+#vue {
+  height: 300px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.namedej {
+  text-align: center;
+}
+
+.vue {
+  display: flex;
+  justify-content: center;
+}
+
+/* carl slider */
+
+.special {
+  min-height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 100px;
+  background-color: #efefef;
+}
+
+.slide-content {
+  margin: 0 40px;
+}
+
+.card {
+  width: 280px;
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.image-conent,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+
+.image-conent {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #01268d;
+  border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #01268d;
+}
+
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #fff;
+}
+
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
+}
+
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #64f440;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.description {
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+
+.button {
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 8px 16px;
+  background-color: #4070f4;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.03s ease;
+}
+
+.button:hover {
+  background-color: #01268d;
+}
+
+/* service traiteur */
+
+.fsec{
+  width: 100%;
+  padding-top: 100px;
+}
+
+.partimg{
+  border: 2px solid rgb(56, 56, 56);
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgb(56, 56, 56);
+}
+
+#traiteur{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background-color: #ece5e5;
+}
+
+.parttext{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.titre-traiteur, h2{
+  font-size: 35px;
+  font-weight: 500;
+  text-overflow:ellipsis;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 2px black;
+}
+
+.traiteur{
+  font-size: 15px;
+  font-weight: 200;
+}
+
+/* section gourmandise */
+
+.gour{
+  width: 100%;
+  padding-top: 100px;
+}
+
+#gourmandise{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 70px;
+}
+
+.img-burger img{
+  height: 200px;
+  width: 300px;
+  border-radius: 250px;
+}
+
+.burger{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* section braise */
+
+.braise{
+  padding-top: 100px;
+}
+
+.poisson{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 70px;
+}
+
+.img-poulet img{
+  height: 200px;
+  width: 300px;
+  border-radius: 250px 150px; 
+}
+
+.poulet{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* section poulet dg */
+
+.ssec{
+  width: 100%;
+  padding-top: 100px;
+  /* height: 500px; */
+}
+
+#pouletdg{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0e2c7  ;
+}
+
+.textdg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.imgdg img{
+  height: 400px;
+  width: 600px;
+  border: 2px solid #e0e2c7;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 3px black;
+}
+
+/* section contact */
+/* .contactez-nous{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) url(./assets/serveuse.png));
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  color: white;
+} */
+.tsec{
+  padding-top: 100px;
+}
+
+.contactez-nous{
+  background-image: url(./assets/serveuse.png);
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  position: relative;
+}
+
+.contactez-nous::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.contactez-nous h3{
+text-align: center;
+padding: 50px;  
+font-size: 50px;
+font-style: italic;
+text-transform: capitalize;
+color: #efefef;
+}
+
+/* section formulaire */
+
+.form{
+  width: 100%;
+  height: 250px;
+  padding-top: 30px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 25px;
+}
+
+.double-input{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.double-input input{
+  height: 40px;
+  width: 350px;
+}
+
+#message{
+  height: 100px;
+  width: 725px;
+}
+
+#ENVOYER{
+  height: 40px;
+  width: 100px;
+  background-color: rgba(221, 219, 76, 0.8);
+  border-radius: 15px;
+  color: #1b0d0d;
+  border-color: rgba(221, 219, 76, 0.8);
+  cursor: pointer;
+}
+
+#ENVOYER:hover{
+  background-color: #da7624;
+  border-color: #da7624;
+  box-shadow: 2px 2px 2px 2px #3d2c1b;
+  transition: all 500ms ease;
+}
+
+/* section footer */
+
+footer{
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 25px;
+}
+
+.reseau{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.facebook, .whatsapp, .messenger{
+  display: flex;
+  align-items: center;
+}
+
+svg{
+  height: 60px;
+  width: 60px;
+}
+
+a{
+  text-decoration: none;
+}
+
+h6{
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+#face:hover{
+  color: #6b8ce6;
+  text-shadow: 1px 1px 1px  black;
+  transition: all 500ms ease;
+}
+
+#what:hover{
+  color: rgb(31, 184, 31);
+  text-shadow: 1px 1px 1px  black;
+  transition: all 500ms ease;
+}
+
+#mess:hover{
+  color: #84c8f5fa;
+  text-shadow: 1px 1px 1px  black;
+  transition: all 500ms ease;
+}
+
+/* section atouts */
+
+.atouts{
+  padding-top: 100px;
+  height: 400px;
+}
+
+.king{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5px;
+}
+
+.perso{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.perso h4{
+  text-shadow: 1px 1px 1px black;
+  font-size: 20px;
+}
+
+.img-perso img{
+  width: 350px;
+  height: 300px;
+  border-radius: 150px 250px 200px;
+  box-shadow: 2px 2px 2px 2px #333;
+}
