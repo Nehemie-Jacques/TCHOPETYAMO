@@ -1,68 +1,110 @@
-*, 
-*::after, 
-*::before{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*! Selecteurs universel ---------------------------------------------------------------------------------- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  /* overflow-x: hidden   ; */
 }
 
 body {
-  font-family: 'poppins', serif;
-  font-size: 14px;
+  font-family: "Poppins", serif;
+  width: 100vw;
+  height: 100vh;
 }
 
-.sec1 {
-  background-image: url(./assets/imagedefond2.png);
-  height: 300px;
-  background-size: cover;
-  background-blend-mode: darken;
-  border: 2px solid;
-  border-radius: 10px;
+/*! ---------------------------------------------------------------------------------- */
+.entete {
+  position: relative;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.7);
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 100%;
+  height: 35rem;
 }
 
-#logo {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  padding: 2rem;
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
 }
 
-.firsth {
-  font-size: 40px;
-  font-style: italic;
-  color: rgb(45, 45, 48);
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
-
-.title {
+.background::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.container {
+  position: absolute;
+  z-index: 10;
+  color: rgb(248, 239, 239);
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  gap: 4rem;
 }
 
-.logo {
+.first-content {
   display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  gap: 2rem;
 }
 
-#text {
-  font-size: 18px;
-  font-family: fantasy;
-  font-style: italic;
-  color: rgb(20, 14, 15);
-  padding-left: 30px;
+.first-content img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
 }
-nav li {
-  float: left;
-  display: table;
-  list-style-type: none;
+
+.first-content h1 {
+  font-size: 50px;
+  font-weight: 500;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.entete p {
+  text-align: center;
+  font-style: italic;
+  color: rgb(248, 239, 239);
+}
+
+.second-content {
+  font-size: 18px;
+  padding-left: 3rem;
 }
 
 h1 {
   text-align: center;
   font-size: 35px;
   font-weight: 500;
-  font-family: 'poppins', serif;
-  text-overflow:ellipsis;
+  font-family: "poppins", serif;
+  text-overflow: ellipsis;
   text-transform: capitalize;
   text-shadow: 2px 2px 2px black;
 }
@@ -193,19 +235,19 @@ p {
 }
 
 .overlay::before,
-.overlay::after{
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-    height: 40px;
-    width: 40px;
-    background-color: #01268d;
+.overlay::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #01268d;
 }
 
-.overlay::after{
-    border-radius: 0 25px 0 0;
-    background-color: #fff;
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #fff;
 }
 
 .card-image {
@@ -255,18 +297,18 @@ p {
 
 /* service traiteur */
 
-.fsec{
+.fsec {
   width: 100%;
   padding-top: 100px;
 }
 
-.partimg{
+.partimg {
   border: 2px solid rgb(56, 56, 56);
   border-radius: 5px;
   box-shadow: 3px 3px 3px rgb(56, 56, 56);
 }
 
-#traiteur{
+#traiteur {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -274,47 +316,48 @@ p {
   background-color: #ece5e5;
 }
 
-.parttext{
+.parttext {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
 
-.titre-traiteur, h2{
+.titre-traiteur,
+h2 {
   font-size: 35px;
   font-weight: 500;
-  text-overflow:ellipsis;
+  text-overflow: ellipsis;
   text-transform: capitalize;
   text-shadow: 2px 2px 2px black;
 }
 
-.traiteur{
+.traiteur {
   font-size: 15px;
   font-weight: 200;
 }
 
 /* section gourmandise */
 
-.gour{
+.gour {
   width: 100%;
   padding-top: 100px;
 }
 
-#gourmandise{
+#gourmandise {
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding-top: 70px;
 }
 
-.img-burger img{
+.img-burger img {
   height: 200px;
   width: 300px;
   border-radius: 250px;
 }
 
-.burger{
+.burger {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -323,24 +366,24 @@ p {
 
 /* section braise */
 
-.braise{
+.braise {
   padding-top: 100px;
 }
 
-.poisson{
+.poisson {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding-top: 70px;
 }
 
-.img-poulet img{
+.img-poulet img {
   height: 200px;
   width: 300px;
-  border-radius: 250px 150px; 
+  border-radius: 250px 150px;
 }
 
-.poulet{
+.poulet {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -349,27 +392,27 @@ p {
 
 /* section poulet dg */
 
-.ssec{
+.ssec {
   width: 100%;
   padding-top: 100px;
   /* height: 500px; */
 }
 
-#pouletdg{
+#pouletdg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e0e2c7  ;
+  background-color: #e0e2c7;
 }
 
-.textdg{
+.textdg {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
-.imgdg img{
+.imgdg img {
   height: 400px;
   width: 600px;
   border: 2px solid #e0e2c7;
@@ -377,7 +420,7 @@ p {
   box-shadow: 3px 3px 3px 3px black;
 }
 
-/* section contact */
+/* ?section contact */
 /* .contactez-nous{
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) url(./assets/serveuse.png));
   background-position: center;
@@ -386,45 +429,69 @@ p {
   height: 200px;
   color: white;
 } */
-.tsec{
-  padding-top: 100px;
+.contact-section {
+  padding-top: 10rem;  
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.contact-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.contact-img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .contactez-nous{
-  background-image: url(./assets/serveuse.png);
-  width: 100%;
-  height: 150px;
-  background-size: cover;
   position: relative;
+  z-index: 10;
+  color: #c8c9c2;
+  padding-bottom: 9rem;
 }
-
-.contactez-nous::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.contactez-nous h3{
-text-align: center;
-padding: 50px;  
-font-size: 50px;
-font-style: italic;
-text-transform: capitalize;
-color: #efefef;
+.contactez-nous h3 {
+  text-align: center;
+  padding: 50px;
+  font-size: 50px;
+  font-style: italic;
+  text-transform: capitalize;
+  color: #efefef;
 }
 
 /* section formulaire */
 
-.form{
+.form {
   width: 100%;
   height: 250px;
   padding-top: 30px;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -432,24 +499,24 @@ form{
   gap: 25px;
 }
 
-.double-input{
+.double-input {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 25px;
 }
 
-.double-input input{
+.double-input input {
   height: 40px;
   width: 350px;
 }
 
-#message{
+#message {
   height: 100px;
   width: 725px;
 }
 
-#ENVOYER{
+#ENVOYER {
   height: 40px;
   width: 100px;
   background-color: rgba(221, 219, 76, 0.8);
@@ -459,7 +526,7 @@ form{
   cursor: pointer;
 }
 
-#ENVOYER:hover{
+#ENVOYER:hover {
   background-color: #da7624;
   border-color: #da7624;
   box-shadow: 2px 2px 2px 2px #3d2c1b;
@@ -468,7 +535,7 @@ form{
 
 /* section footer */
 
-footer{
+footer {
   width: 100%;
   padding-top: 50px;
   display: flex;
@@ -477,64 +544,67 @@ footer{
   gap: 25px;
 }
 
-.reseau{
+.reseau {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.facebook, .whatsapp, .messenger{
+.facebook,
+.whatsapp,
+.messenger {
   display: flex;
   align-items: center;
 }
 
-svg{
+svg {
   height: 60px;
   width: 60px;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-h6{
+h6 {
   text-transform: capitalize;
   font-size: 20px;
 }
 
-#face:hover{
+#face:hover {
   color: #6b8ce6;
-  text-shadow: 1px 1px 1px  black;
+  text-shadow: 1px 1px 1px black;
   transition: all 500ms ease;
 }
 
-#what:hover{
+#what:hover {
   color: rgb(31, 184, 31);
-  text-shadow: 1px 1px 1px  black;
+  text-shadow: 1px 1px 1px black;
   transition: all 500ms ease;
 }
 
-#mess:hover{
+#mess:hover {
   color: #84c8f5fa;
-  text-shadow: 1px 1px 1px  black;
+  text-shadow: 1px 1px 1px black;
   transition: all 500ms ease;
 }
 
 /* section atouts */
 
-.atouts{
+.atouts {
   padding-top: 100px;
   height: 400px;
 }
 
-.king{
+.king {
+  padding-top: 10rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 5px;
 }
 
-.perso{
+.perso {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -542,12 +612,12 @@ h6{
   gap: 20px;
 }
 
-.perso h4{
+.perso h4 {
   text-shadow: 1px 1px 1px black;
   font-size: 20px;
 }
 
-.img-perso img{
+.img-perso img {
   width: 350px;
   height: 300px;
   border-radius: 150px 250px 200px;
